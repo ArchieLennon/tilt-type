@@ -44,17 +44,34 @@ function draw() {
   if (ios && motion) {
     iostext.html("");
   }
+
+
+
   // let zMotion = round(1 * abs(radians(rotationZ) - PI), 2)
   // let casualVal = round(map(abs(radians(rotationZ) - PI), 0, PI, 0, 1), 2)
-  let casl = round(map(abs(radians(rotationY)), 0, PI / 2, 0, 1), 2)
+
+  // let casl = round(map(abs(radians(rotationY)), 0, PI / 2, 0, 1), 2)
+
   // let crsv = round(map(abs(radians(rotationY)), 0, PI/2, 0, 1), 1)
   let fontweight = round(map(abs(radians(rotationX)), 0, PI / 2, 300, 1000));
   // let fontslant = round(map(abs(radians(rotationY)), 0, PI/2, 0, -15));
   let fontslant = round(map(abs(radians(rotationZ) - PI), 0, PI, -15, 0))
 
   // variable.style('font-size', zMotion + 'em');
-  variable.style('font-weight', fontweight);
-  variable.style('font-variation-settings', "'slnt' " + fontslant + ", 'CASL' " + casl);
+ 
+  // variable.style('font-weight', fontweight);
+  // variable.style('font-variation-settings', "'slnt' " + fontslant + ", 'CASL' " + casl);
+
+
+
+// This bit below somehow has to lug into the bit above
+
+   variable.style('font-variation-settings', "'wght' " + rotationX.value() + ", 'wdth' " + rotationZ.value());
+
+
+
+
+
 
   weight.html(fontweight);
   // size.html(zMotion + 'em');

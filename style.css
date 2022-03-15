@@ -1,15 +1,42 @@
+
+
+@font-face {
+  src: url("Droop_V2VF.woff2")
+    format("woff2");
+  font-family: droop;
+  color: rgb(255, 255, 255);
+  
+}
+
+
+@font-face {
+  src: url("AmericanRadar-Regular.otf")
+    format("truetype");
+  font-family: AR;
+  color: rgb(255, 255, 255);
+  
+}
+
+
+
+
 html,
 body {
   margin: 0;
   padding: 10;
-  font-family: "Recursive";
-  font-size: 5vw;
-    background: #000;
+  font-family: "AR";
+  font-size: 1vw;
+    background: rgb(255, 154, 2);
   color: #fff;
 }
 
+
+
+
+
 a {
   color: #fff;
+  
 }
 
 canvas {
@@ -32,18 +59,19 @@ section {
 /*   direction: rtl; */
   display: block;
   max-width: 100%;
-  min-height: 70vh;
-  font-family: "Recursive";
+  min-height: 20vh;
+  font-family: "droop";
   margin: 0;
   padding: 0;
   background: transparent;
   border: 0px solid;
-  font-size: 5.1em;
+  font-size: 10.1em;
   color: #fff;
+  text-transform: uppercase;
 }
 
 #font-info {
   margin-top: 2em;
-  min-height: 30vh;
-  font-weight: 300;
+  min-height: 10vh;
+  font-size: 1vw;
 }
