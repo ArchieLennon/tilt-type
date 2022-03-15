@@ -7,6 +7,11 @@ let casual;
 let iostext
 let ios = false;
 
+
+
+let weightSlider;
+let slantSlider;
+
 if (typeof DeviceMotionEvent.requestPermission === 'function') {
   ios = true;
   document.body.addEventListener('click', function() {
@@ -34,6 +39,22 @@ function setup() {
   // size = select('#size');
   casual = select('#casual');
     iostext = select('#ios');
+
+
+//testing
+
+weightSlider = createSlider(-900, 900, 0);
+weightSlider.style('width', '180px');
+
+slantSlider = createSlider(-900, 900, 0);
+slantSlider.style('width', '180px');
+
+
+
+
+
+
+
 }
 
 function draw() {
@@ -66,10 +87,13 @@ function draw() {
 
 // This bit below somehow has to lug into the bit above
 
-   variable.style('font-variation-settings', "'wght' " + fontweight.value() + ", 'wdth' " + fontslant.value());
+  //  variable.style('font-variation-settings', "'wght' " + fontweight.value() + ", 'wdth' " + fontslant.value());
+
+//testing
 
 
 
+variable.style('font-variation-settings', "'wght' " + weightSlider.value() + ", 'wdth' " + slantSlider.value());
 
 
 
