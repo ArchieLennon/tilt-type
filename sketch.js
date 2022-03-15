@@ -66,7 +66,7 @@ function draw() {
 
 // This bit below somehow has to lug into the bit above
 
-   variable.style('font-variation-settings', "'wght' " + rotationX.value() + ", 'wdth' " + rotationZ.value());
+   variable.style('font-variation-settings', "'wght' " + fontweight.value() + ", 'wdth' " + fontslant.value());
 
 
 
